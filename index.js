@@ -1,5 +1,21 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  let sumArray = []
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      let sum = array[i] + array[j]
+     // console.log(sumArray)
+      sumArray.push(sum)
+    }
+
+
+  }
+  match = sumArray.find((sum) => sum === target)
+      if (match) {
+        return true
+      } else {
+        return false
+      }
 }
 
 /* 
